@@ -21,6 +21,7 @@ public class Javabasicspractice{
    Float rad = sc.nextFloat();
    Float area =3.14f*rad*rad;
    System.out.println(area);
+   
 
     }
 }

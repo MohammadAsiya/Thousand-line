@@ -6,8 +6,8 @@ public class Javabasics{
         System.out.println("* * *");
         System.out.println("* *");
         System.out.println("*");*/
+        //Hi
 
-        
 
         //variables
        /*  int a=10;

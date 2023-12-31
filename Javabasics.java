@@ -1,6 +1,7 @@
 import java.util.*;
 public class Javabasics{
     public static void main(String []args){
+        //
         //System.out.print("Hello Asiya!!");
         /*System.out.println("* * * *");
         System.out.println("* * *");

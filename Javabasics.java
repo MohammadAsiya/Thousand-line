@@ -133,7 +133,7 @@ public class Javabasics{
   
     System.out.println((3>2)&&(2<4));
 
-    //OR operator
+    //OR 
     System.out.println((3>2)||(2<4));
     //Not
     System.out.println(!(2<4));

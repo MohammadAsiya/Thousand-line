@@ -8,8 +8,7 @@ public class Javabasics{
         System.out.println("*");*/
 
         //variables
-       /*  int a=10;
-        int b=20;
+        /*int b=20;
         System.out.println(a);
         System.out.println(b);
 
@@ -66,18 +65,82 @@ public class Javabasics{
         System.out.println(b);*/
 
         //Type casting [long datatype to short datatype]
-        Scanner sc = new Scanner(System.in);
+      /*  Scanner sc = new Scanner(System.in);
         float a=sc.nextFloat();
         int b = (int)a;
         System.out.println(b);
         char c ='C';
         int  d =(int)c;
-        System.out.println(d);
+        System.out.println(d); */
 
         //Type Promotion in Java
         //->Java automatically promotes byte,short,char operand to int when evaluting expression
         //->If operand has long,double,float the whole expression is promoted to long,double or float
         
+        
+        
+        //Operators
+        //Arthimatic =>Binary =>Unary
+       /* int a=5;
+        int b =2;
+        System.out.println("Add ="+(a+b));
+        System.out.println("Subtract ="+(a-b));
+        System.out.println("Multiplication ="+(a*b));
+        System.out.println("division ="+(a/b));
+        System.out.println("Modulo ="+(a%b));
+      */
+
+
+      //unary
+      //pre increment
+     /*int a =10;
+      int b = ++a;
+      System.out.println(b);
+      System.out.println(a);*/
+
+      //post increment
+      /*int a =10;
+      int b = a++;
+      System.out.println(b);
+      System.out.println(a); */
+    
+      //pre decrement
+     /*int a =10;
+      int b = --a;
+      System.out.println(b);
+      System.out.println(a);*/
+
+      //post decrement
+      /*int a =10;
+      int b = a--;
+      System.out.println(b);
+      System.out.println(a);*/
+
+
+    //Relational operator
+    //==,!=,>,<,>=,<=
+   /* int A=5;
+    int B =10;
+    System.out.println(A==B);
+    System.out.println(A!=B);
+    System.out.println(A>B);
+    System.out.println(A<B);
+    System.out.println(A<=B);
+    System.out.println(A>=B); */
+
+    //Logical operators
+    //And
+  
+    System.out.println((3>2)&&(2<4));
+
+    //OR
+    System.out.println((3>2)||(2<4));
+    //Not
+    System.out.println(!(2<4));
+
+
+
+
 
     }
 }

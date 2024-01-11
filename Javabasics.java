@@ -1,6 +1,6 @@
 import java.util.*;
 public class Javabasics{
-    public static void main(String []args){
+   // public static void main(String []args){
         //System.out.print("Hello Asiya!!");
         /*System.out.println("* * * *");
         System.out.println("* * *");
@@ -8,6 +8,7 @@ public class Javabasics{
         System.out.println("*");*/
 
         //variables
+     
         /*int b=20;
         System.out.println(a);
         System.out.println(b);
@@ -131,16 +132,19 @@ public class Javabasics{
     //Logical operators
     //And
   
-    System.out.println((3>2)&&(2<4));
+   /* System.out.println((3>2)&&(2<4));
 
     //OR operator
     System.out.println((3>2)||(2<4));
     //Not
     System.out.println(!(2<4));
-
-
-
-
-
+  
+*/
+ public static void printhelloworld(){
+  System.out.println("Hello World!");
+ }
+ public static void main(String[] args) {
+ printhelloworld();
+ printhelloworld();
     }
 }

@@ -1,7 +1,8 @@
 import java.util.*;
 public class pattern {
     public static void main(String[] args) {
-     /*   Scanner sc =new Scanner(System.in);
+        //Hollow rectangle
+      /* Scanner sc =new Scanner(System.in);
         System.out.println("Enter the number of lines");
         int n =sc.nextInt();
         for(int i=1;i<n;i++){
@@ -19,10 +20,11 @@ public class pattern {
                 System.out.print("*");
             }
             System.out.println();
-        } */
+        } 
+        */
 
         //Butterfly pattern
-        Scanner sc=new Scanner(System.in);
+       /* Scanner sc=new Scanner(System.in);
         int n =sc.nextInt();
         for(int i=1;i<=n;i++){
             for(int j=1;j<=i;j++){
@@ -47,7 +49,8 @@ public class pattern {
                 System.out.print("*");
             }
             System.out.println();
+
+        */    
         }
-    }
 }
 

@@ -1,4 +1,5 @@
 import java.util.*;
+import java.math.*;
 public class Javabasics{
    // public static void main(String []args){
         //System.out.print("Hello Asiya!!");
@@ -140,11 +141,102 @@ public class Javabasics{
     System.out.println(!(2<4));
   
 */
- public static void printhelloworld(){
+ //Functions
+ /*public static void printhelloworld(){
   System.out.println("Hello World!");
  }
  public static void main(String[] args) {
  printhelloworld();
  printhelloworld();
+    }*/
+
+
+  //parameters two types
+  //=>Actual parameters
+  //=>Formal parameters
+ /* public static int sum(int n1,int n2)//Formal parameters{
+    int sumis = n1+n2;
+    return sumis;
+  }
+  public static void main(String args[]){
+    int a =5;
+    int b =10;
+    int tot=sum(a,b);//Actual parameters
+    System.out.println("Sum is"+tot);
+  }
+  */
+
+
+  //Binomial coefficient
+  //n!/r!*(n-r)!
+ /* public static int factorial(int n){
+    int f=1;
+    for(int i=1;i<=n;i++){
+      f=f*i;
     }
+    return f;
+  }
+  public static void main(String args[]){
+    //n=5,r=2
+    int n=5,r=2;
+    int a=factorial(n);
+    int b=factorial(r);
+    int c=factorial(n-r);
+    int tot=a/(b*c);
+    System.out.print(tot);
+  }*/ 
+
+  //Function overloading using parameters
+ /*public static int sum(int a,int b){
+    return a+b;
+  }
+  public static int sum(int a,int b,int c){
+    return a+b+c;
+  }
+  public static void main(String args[]){
+    int a=5;
+    int b=10;
+    int c=15;
+    System.out.println("sum of two numbers is:"+sum(a,b));
+    System.out.println("Sum of Three numbers is: "+sum(a,b,c));
+  }
+  */
+
+  //Function overloading with datatypes
+  /*public static int sum(int a,int b){
+    return a+b;
+  }
+  public static float sum(float a ,float b){
+    return a+b;
+  }
+  public static void main(String args[]){
+    System.out.println("Integers sum is :"+sum(5,10));
+    System.out.println("Float sum is: "+sum(3.5f,6.5f));
+  }
+  */
+
+  //Binary to decimal conversion
+  public static int Bintodec(int bin){
+    int mynum=bin;
+    int pow=0;
+    int dec=0;
+    while(mynum>0){
+       int last =mynum%10;
+       if(last!=0 && last!=1){
+          System.out.println("Enter the binary number");
+          return 0;
+       }
+       dec = dec+(last*(int)Math.pow(2,pow));
+       pow++;
+       mynum=mynum/10;
+    }
+    return dec;
+  }
+  //public static void main(String args[]){
+  public static void main(String args[]){ 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the binary number");
+    int a = sc.nextInt();
+    System.out.println("The binary number"+a+" in the form of decimal number is"+Bintodec(a));
+  }
 }

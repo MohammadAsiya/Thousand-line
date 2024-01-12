@@ -215,28 +215,4 @@ public class Javabasics{
   }
   */
 
-  //Binary to decimal conversion
-  public static int Bintodec(int bin){
-    int mynum=bin;
-    int pow=0;
-    int dec=0;
-    while(mynum>0){
-       int last =mynum%10;
-       if(last!=0 && last!=1){
-          System.out.println("Enter the binary number");
-          return 0;
-       }
-       dec = dec+(last*(int)Math.pow(2,pow));
-       pow++;
-       mynum=mynum/10;
-    }
-    return dec;
-  }
-  //public static void main(String args[]){
-  public static void main(String args[]){ 
-    Scanner sc=new Scanner(System.in);
-    System.out.println("Enter the binary number");
-    int a = sc.nextInt();
-    System.out.println("The binary number"+a+" in the form of decimal number is"+Bintodec(a));
-  }
 }

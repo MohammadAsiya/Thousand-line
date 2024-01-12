@@ -1,6 +1,6 @@
 import java.util.*;
 public class Javabasicspractice{
-    public static void main (String [] args){
+   // public static void main (String [] args){
     //sum of two elements
    /*Scanner sc = new Scanner(System.in);
     int a = sc.nextInt();
@@ -128,6 +128,110 @@ public class Javabasicspractice{
     }*/
     
     //pattern programs
+
+     //Binary to decimal conversion
+ /*public static int Bintodec(int bin){
+    int mynum=bin;
+    int pow=0;
+    int dec=0;
+    while(mynum>0){
+       int last =mynum%10;
+       if(last!=0 && last!=1){
+          System.out.println("Enter the binary number");
+          return 0;
+       }
+       dec = dec+(last*(int)Math.pow(2,pow));
+       pow++;
+       mynum=mynum/10;
     }
+    return dec;
+  }
+  //public static void main(String args[]){
+  public static void main(String args[]){ 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the binary number");
+    int a = sc.nextInt();
+    System.out.println("The binary number"+a+" in the form of decimal number is"+Bintodec(a));
+    }*/
+
+
+
+    //Decimal to Binary conversion
+   /*public static int decbin (int n){
+        int bin=0;
+        int pow=0;
+        while(n>0){
+            int rem=n%2;
+            bin=bin+rem*((int)Math.pow(10,pow));
+            n=n/2;
+            pow++;
+        }
+        return bin;
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Decimal number");
+        int a =sc.nextInt();
+        System.out.println("The binary Number for "+a+" is: "+decbin(a));
+
+    }
+*/
+
+
+   // Average of Three numbers method
+   /*public static float avgofthree(int a,int b,int c){
+        float avg=(a+b+c)/3;
+        return avg;
+   }
+   public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the Three numbers");
+    int n1 = sc.nextInt();
+    int n2 =sc.nextInt();
+    int n3 =sc.nextInt();
+    System.out.println("The average of given Three numbers is :"+avgofthree(n1,n2,n3));
+   }
+   */
+
+   //:Write a method named isEven that accepts an int argument.Themethodshouldreturntrueiftheargumentiseven,orfalseotherwise.Alsowriteaprogramtotestyourmethod
+   /*public static boolean isEven(int n){
+    if(n%2==0){
+        return true;
+    }
+    return false;
+   }
+   public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number");
+    int a =sc.nextInt();
+    System.out.println("The Statement "+a+" is a Even number is "+isEven(a));
+    
+   }
+   */
+
+
+   //Palindrome
+   //WriteaJavaprogramtocheckifanumberisapalindromeinJava?(121isapalindrome, 321 is not)Anumberiscalledapalindromeifthenumberisequaltothereverseofanumbere.g.,121isapalindromebecausethereverseof121is121itself.Ontheotherhand,321isnotapalindrome because the reverse of 321 is 123, which is not equal to 321
+   public static boolean palindrome(int n){
+    int m =n;
+    int rev=0;
+    while(n>0){
+        int rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    if(rev==m){
+        return true;
+    }
+    return false;
+
+   }
+   public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number");
+    int n = sc.nextInt();
+    System.out.println("The Statement "+n+" is Palindrome is: "+palindrome(n));
+   }
+
 }
 

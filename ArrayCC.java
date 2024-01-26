@@ -143,7 +143,7 @@ public class ArrayCC{
     }*/
 
     //Kadens algo for array contains positive numbers
-    public static void kadans(int arr[]){
+    /*public static void kadans(int arr[]){
         int maxsum=Integer.MIN_VALUE;
         int currsum=0;
         for(int i=0;i<arr.length;i++){
@@ -160,5 +160,41 @@ public class ArrayCC{
     public static void main (String args[]){
         int arr[]={-2,-3,-4,-1,-2,-1,-5,-3};
         kadans(arr);
+    }
+}*/
+//===>>Trapping rain waterr  
+    public static int trappingwater(int height[]){
+        int n=height.length;
+        int width=1;
+        //left-max-array
+        int leftmax[]=new int[n];
+        leftmax[0]=height[0];
+        for(int i=1;i<n;i++){
+            leftmax[i]=Math.max(height[i],leftmax[i-1]);
+        }
+
+        //rigt-max array
+        int rightmax[]=new int[n];
+        rightmax[n-1]=height[n-1];
+        for(int i=n-2;i>=0;i--){
+            rightmax[i]=Math.max(height[i],rightmax[i+1]);
+        }
+
+        int trappingwater=0;
+        //loop
+        for(int i=0;i<n;i++){
+        //find  water level
+        //minimum of leftmax and right max
+            int waterlevel=Math.min(leftmax[i],rightmax[i]);
+            //trapping water
+            trappingwater+=(waterlevel-height[i])*width;
+            
+        }
+        return trappingwater;
+
+    }
+    public static void main(String args[]){
+        int height[] ={4,2,0,6,3,2,5};
+        System.out.println(trappingwater(height));
     }
 }

@@ -163,7 +163,7 @@ public class ArrayCC{
     }
 }*/
 //===>>Trapping rain waterr  
-    public static int trappingwater(int height[]){
+   /*  public static int trappingwater(int height[]){
         int n=height.length;
         int width=1;
         //left-max-array
@@ -196,5 +196,76 @@ public class ArrayCC{
     public static void main(String args[]){
         int height[] ={4,2,0,6,3,2,5};
         System.out.println(trappingwater(height));
+    }*/
+    
+
+
+//===>Buy sell stocks
+//my own  
+    /*public static int BuySellStocks(int price[]){ 
+        int n =price.length; 
+        int i=0;
+        int maxstock=0;
+        for(int j=1;j<n;j++){
+            if((price[j]-price[i])<0){
+                i++;
+            }
+            else{
+                maxstock=Math.max(maxstock,(price[j]-price[i]));
+            }
+        }
+        return maxstock;
     }
+    public static void main(String args[]){
+        int price[]={7,1,5,3,6,4};
+        System.out.println(BuySellStocks(price));
+    }*/ 
+    
+    
+//==>Array practice questions
+//1)Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+   
+   
+   /*public static boolean twice(int n,int array[]){
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+           if(array[i]==array[j]){
+            return true;
+           }
+        }
+    }
+    return false;
+   }
+   public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("enter the array size");
+    int n =sc.nextInt();
+    int array[]=new int[n];
+    for(int i=0;i<n;i++){
+        array[i]=sc.nextInt();
+    }
+    System.out.println(twice(n,array));
+   }*/
+
+//==>question 2    Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+  public static  int checknum(int n,int t,int array[]){
+    for(int i=0;i<n;i++){
+        if(array[i]==t){
+            return i;
+        }
+    }
+    return -1;
+  }
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the array length");
+    int n =sc.nextInt();
+    int array[]= new int[n];
+    for(int i=0;i<n;i++){
+        array[i]=sc.nextInt();
+    }
+    System.out.println("Enter the number you want to check");
+    int t =sc.nextInt();
+    System.out.println(checknum(n,t,array));
+  }
 }

@@ -1,4 +1,6 @@
 import java.util.*;
+
+import javax.swing.plaf.synth.SynthScrollPaneUI;
 public class ArrayCC{
    // public static void main(String args[]){
       //  Scanner sc=new Scanner(System.in);
@@ -248,7 +250,7 @@ public class ArrayCC{
    }*/
 
 //==>question 2    Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
-  public static  int checknum(int n,int t,int array[]){
+  /*public static  int checknum(int n,int t,int array[]){
     for(int i=0;i<n;i++){
         if(array[i]==t){
             return i;
@@ -268,4 +270,134 @@ public class ArrayCC{
     int t =sc.nextInt();
     System.out.println(checknum(n,t,array));
   }
-}
+}*/
+
+//==>2D Array
+    //Searching for element in 2D array
+    /*public static int maximumvalue(int matrix[][]){
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                max=Math.max(max,matrix[i][j]);
+            }
+        }
+        return max;
+    }
+    public static int minimumvalue(int matrix[][]){
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                min=Math.min(min,matrix[i][j]);
+            }
+        }
+        return min;
+    }
+    public static boolean search(int matrix[][],int key){
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(matrix[i][j]==key){
+                    System.out.println("Key found at index ( "+i+" "+j+")") ;
+                    return true;
+                }
+            }
+        }
+        System.out.println("Key not Found");
+        return false;
+    } 
+    public static void main(String args[]){
+        //Creation of 2D array
+        int matrix[][]=new int[3][3];
+        //Input of 2D array
+        Scanner sc = new Scanner(System.in);
+        int n=matrix.length,m=matrix[0].length;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                matrix[i][j]=sc.nextInt();
+            }
+        }
+        //Output of 2D array
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                System.out.print(matrix[i][j]+" ");
+            }
+            System.out.println();
+        }
+    System.out.println("Minimumvalue is :"+minimumvalue(matrix));
+    System.out.println("Maximumvalue is "+maximumvalue(matrix));
+    System.out.println("Enter the key you want to search");
+    int key = sc.nextInt();
+    search(matrix, key);
+
+    }*/
+
+
+//==>Spiralmatrix array
+    /*public static void Spiralmatrix(int matrix[][]){
+        int startcol=0;
+        int startrow=0;
+        int endrow=matrix.length-1;
+        int endcol=matrix[0].length-1;
+        while(startcol<=endcol &&startrow<=endrow) {
+            //Top
+            for(int j=startcol;j<=endcol;j++){
+                System.out.print(matrix[startrow][j]+" ");
+            }
+            //Left
+            for(int i=startrow+1;i<=endrow;i++){
+                System.out.print(matrix[i][endcol]+" ");
+            }
+            //Bottom
+            for(int j=endcol-1;j>=startcol;j--){
+                System.out.print(matrix[endrow][j]+" ");
+            }
+            //Right
+            for(int i=endrow-1;i>startrow;i--){
+                System.out.print(matrix[i][startcol]+" ");
+            }
+            startrow++;
+            startcol++;
+            endcol--;
+            endrow--;
+
+        }
+    }
+    public static void main(String args[]){
+        int matrix[][]={{1,2,3,4},
+                        {5,6,7,8},
+                        {9,10,11,12},
+                        {13,14,15,16}};
+        Spiralmatrix(matrix);
+    }*/
+
+
+//==>Diagnol sum
+    public static int Diagnolsum(int matrix[][]){
+        int diagsum=0;
+        //On^2
+        /*for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix.length;j++){
+                if(i==j){
+                    diagsum+=matrix[i][j];
+                }
+                else if(i+j==matrix.length-1){
+                    diagsum+=matrix[i][j];
+                }
+            }
+        }*/
+        //O^n time complexity
+        for(int i=0;i<matrix.length;i++){
+            //primary diagnol
+            diagsum+=matrix[i][i];
+            //Secondary diagnol
+            if(i!=matrix.length-1-i)
+            diagsum+=matrix[i][matrix.length-1-i];
+        }
+        return diagsum;
+    }
+    public static void main(String args[]){
+        int matrix[][]={{1,2,3},
+                        {4,5,6},
+                        {7,8,9}};
+        System.out.print(Diagnolsum(matrix));
+    }
+} 

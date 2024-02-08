@@ -1,7 +1,10 @@
+
+import javax.xml.transform.stax.StAXSource;
+
 import javafx.scene.layout.StackPane;
 
 public class OOPS {
-    public static void main(String args[]){
+    /*public static void main(String args[]){
         Pen p1= new Pen();//created pen object
         System.out.println(p1.color);
         System.out.println(p1.Tip);
@@ -29,4 +32,126 @@ class Pen{
 class Bankacc{
     public String username;
     private String password;
+}
+*/
+//==>Getters,setters and "this" keyword
+//This keyword is used to access that class variable.
+  /*public static void main (String args[]){
+    Pen p1= new Pen();//created pen object
+    System.out.println(p1.getColor());
+    System.out.println(p1.getTip());
+    p1.setColor("pink");
+    p1.settip(15);
+    System.out.println(p1.getColor());
+    System.out.println(p1.getTip());
+  }
+}
+class Pen{
+    private String color="blue";
+    private int Tip=1;
+    String getColor( ){
+        return this.color;
+    }
+    int getTip(){
+        return this.Tip;
+    }
+    void setColor(String newcolor){
+        this.color=newcolor;
+    }
+    void settip(int newtip){
+        this.Tip = newtip;
+    }*/
+
+
+//==>Encapsulation
+//Encapsulation is defined as the wrapping up of the data & Methods under a single unit.
+//example:capsul(omage)
+//It also implements data hiding.(public,private,default,protected)
+
+//Constructors
+//Constructor is a speacial method which is invoked automatically at the time of "object creation".
+//~~Constructors have the  same name as class name or structure
+//~~Constructors don't have a return time.(Not even void)
+//~~Constructors are only called once,at object creation.
+//~~Memory allocation happens when constructor is called.
+   /* 
+    public static void main(String[] args) {
+        Student s1 = new Student("Asiya");
+        System.out.println(s1.name);
+    }
+}
+class Student{
+    String name;
+    int roll;
+    Student(String name){
+        this.name =name;
+    }
+    */
+
+
+
+//Types of constructors
+//==>Non parameterized
+//==>Parameterized
+//==>copy constructor
+
+
+//Constructor overloading(polymorphism)
+    /*public static void main(String args[]){
+        Student s1 = new Student();
+        Student s2 = new Student("Asiya");
+        System.out.println(s2.name);
+        Student s3 = new Student(79);
+        System.out.println(s3.roll);
+        //Student s4 = new Student("zoya",38);//gives Erorr because there is no constructor with 2 parameters.
+    }
+
+
+
+}
+class Student {
+    String name;
+    int roll;
+//==>Non parameterized
+    Student(){
+        System.out.println("Constructor is called...");
+    }
+//==>Parameterized
+    Student(String name){
+        this.name=name;
+    }
+    Student(int roll){
+        this.roll =roll;
+    }*/
+
+
+//==>Copy constructor
+//It's work is to copy one object properties to another object.
+  public static void main(String args[]){
+        Student s1 = new Student();
+        s1.name ="Asiya";
+        s1.roll=79;
+        s1.password="abcd";
+        s1.marks[0]=100;
+        s1.marks[1]=90;
+        s1.marks[2]=80; 
+
+        //Student s2 = new Student(s1);
+        /*s2.password="xyz";  
+        for(int i=0;i<3;i++){
+            System.out.println(s2.marks[i]);
+        } */   
+    }
+}
+class Student{
+    String name;
+    int roll;
+    int marks[];
+    String password;
+    /*Student(Student s1){
+        marks = new int[3];
+        this.name =s1.name;
+        this.roll =s1.roll;
+        this.marks=s1.marks;
+    }*/
 }
